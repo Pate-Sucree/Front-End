@@ -1,20 +1,22 @@
 import axios from "axios";
 const url = "http://18.224.200.47";
 
+const productsServiceURL = "http://localhost:4000"
+
 const getProductList = () => {
-  return axios.get(`${url}/products`);
+  return axios.get(`${productsServiceURL}/products`);
 };
 
 const getProductInfo = (id = 1) => {
-  return axios.get(`${url}/products/${id}`);
+  return axios.get(`${productsServiceURL}/products/${id}`);
 };
 
 const getProductStyles = (id = 1) => {
-  return axios.get(`${url}/products/${id}/styles`);
+  return axios.get(`${productsServiceURL}/products/${id}/styles`);
 };
 
 const getRelatedProducts = (id = 1) => {
-  return axios.get(`${url}/products/${id}/related`);
+  return axios.get(`${productsServiceURL}/products/${id}/related`);
 };
 
 const getQA = (id = 1) => {
