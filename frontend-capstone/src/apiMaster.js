@@ -3,6 +3,9 @@ const url = "http://18.224.200.47";
 
 const productsServiceURL = "http://localhost:4000"
 
+// needs to be changed every time EC2 instance is restarted
+const productServiceURLatAWS = "http://54.221.168.255:9005";
+
 const getProductList = () => {
   return axios.get(`${productsServiceURL}/products`);
 };
